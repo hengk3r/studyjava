@@ -1,0 +1,78 @@
+package Praktikum4;
+// I Made Novandy Asardi (064002100030)
+// Praktikum 4 ElKom 1
+
+public class DataMahasiswa{
+    public static void main(String args[]) {
+        //data pribadi
+        Mahasiswa.snama = "I Made Novandy Asardi";
+        Mahasiswa.snim = "064002100030";
+        Mahasiswa.snilai = 100;
+        
+        //membuat objek teman, m = mahasiswa
+        Mahasiswa m1 = new Mahasiswa("Rafli Riansyah", "064002100028", 97);
+        Mahasiswa m2 = new Mahasiswa("Ridho Baihaqi", "064002100029", 93);
+        Mahasiswa m3 = new Mahasiswa("Achmad Fauzy", "064002100031", 99);
+        Mahasiswa m4 = new Mahasiswa("Fajar Ariestianto", "064002100032", 98);
+        
+        //pemanggilan
+        System.out.println("=====DATA PRIBADI=====");
+        Mahasiswa.printDataPribadi();
+        System.out.println("=====DATA MAHASISWA 1=====");
+        m1.printData();
+        System.out.println("=====DATA MAHASISWA 2=====");
+        m2.printData();
+        System.out.println("=====DATA MAHASISWA 3=====");
+        m3.printData();
+        System.out.println("=====DATA MAHASISWA 4=====");
+        m4.printData();
+        
+    }
+}
+
+class Mahasiswa {
+    String tnama; //t = teman
+    String tnim;
+    int tnilai;
+    static String snama; //s = saya
+    static String snim;
+    static int snilai;
+    
+    public static void Pribadi(String nama, String nim, int nilai) {
+        snama = nama;
+        snim = nim;
+        snilai = nilai;
+    }
+    public Mahasiswa(String nama, String nim, int nilai) {
+        tnama = nama;
+        tnim = nim;
+        tnilai = nilai;
+    }
+    
+    public String Nama() {
+        return (tnama);
+    }
+    
+    public String NIM() {
+        return (tnim);
+    }
+    
+    public int Nilai() {
+        return (tnilai);
+    }
+    
+    public static void printDataPribadi() {
+        System.out.println("Nama    : " + snama);
+        System.out.println("NIM     : " + snim);
+        System.out.println("Nilai   : " + snilai);
+        System.out.println("");
+        
+    }
+    
+    public void printData() {
+        System.out.println("Nama    : " + tnama);
+        System.out.println("NIM     : " + tnim);
+        System.out.println("Nilai   : " + tnilai);
+        System.out.println("");
+    }
+}
